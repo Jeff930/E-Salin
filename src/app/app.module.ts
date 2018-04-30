@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslatePage } from '../pages/translate/translate';
 import { DictionaryPage } from '../pages/dictionary/dictionary';
 import { TabsPage } from '../pages/tabs/tabs';
+import { Keyboard } from '@ionic-native/keyboard';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, { scrollAssist: false, autoFocusAssist: false } ),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,6 +38,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   providers: [
     StatusBar,
     SplashScreen,
+    Keyboard,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
