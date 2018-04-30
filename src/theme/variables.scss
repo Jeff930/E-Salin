@@ -48,17 +48,19 @@ $colors: (
 
 
 $toolbar-ios-title-text-align:center;
-$toolbar-ios-title-font-size: 12vw;
-$toolbar-md-title-font-size : 12vw;
-$toolbar-wp-title-font-size : 12vw;
+$toolbar-ios-title-font-size: 10vw;
+$toolbar-md-title-font-size : 10vw;
+$toolbar-wp-title-font-size : 10vw;
 
-$toolbar-ios-height	:15vw;
-$toolbar-md-height	:15vw;
-$toolbar-wp-height	:15vw;
+$toolbar-ios-height	:8vw;
+$toolbar-md-height	:8vw;
+$toolbar-wp-height	:8vw;
 
-$toolbar-wp-button-font-size:20vw;
-$toolbar-md-button-font-size:20vw;
-$toolbar-ios-button-font-size:20vw;
+$toolbar-wp-button-font-size:10vw;
+$toolbar-md-button-font-size:10vw;
+$toolbar-ios-button-font-size:10vw;
+
+$text-input-placeholder-color:#77605c;
 
 // App Material Design Variables
 // --------------------------------------------------
