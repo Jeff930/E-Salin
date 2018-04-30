@@ -15,7 +15,6 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-
 .titleText{
 	overflow:auto;
 	text-overflow:visible;
@@ -29,6 +28,24 @@ ion-icon{
 	margin-top:-2vw;
 }
 
+.ion-ios-translateicon,
+.ion-md-translateicon{
+  content: url(../assets/imgs/isalin.png);
+  width: 15vw;
+  height: 15vw;
+  margin-top:2vw !important;
+  opacity: 0.9;
+}
+
+
+.ion-ios-dictionaryicon,
+.ion-md-dictionaryicon{
+  content: url(../assets/imgs/tukuyin.png);
+  width: 20vw;
+  height: 12vw;
+  margin-top:0vw !important;
+  opacity: 0.9;
+}
 .toolbar-title.toolbar-title-md, 
 .toolbar-title.toolbar-title-ios, 
 .toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
