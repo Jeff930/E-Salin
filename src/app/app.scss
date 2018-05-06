@@ -14,3 +14,110 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-content{
+	background:url(../assets/imgs/bg.jpg);
+	overflow:hidden;
+}
+
+.tabs-md .tab-button[aria-selected=true]{
+  background:  #e2c653 !important;
+}
+
+.tabs-ios .tab-button[aria-selected=true]{
+  background: #e2c653 !important;
+}
+
+.titleText{
+	overflow:hidden;
+	text-overflow:visible;
+	height:10vw !important;
+	text-align:center;
+	margin-left:-15vw;
+	font-size:80vw !important;
+}
+
+.text-input-md {
+text-align: center;
+padding: 0;
+width: calc(100% - 8px - 8px);
+}
+
+.center{
+	text-align:center !important;
+	margin-top:5vw !important;
+}
+
+.spinner{
+	display:block;
+	border: 1px solid #e2c653;
+	background-color: #ead57e !important;
+	width:90vw !important;
+	height:15vw;
+	border-radius:6px !important;
+	font-size:5vw;
+	margin:auto;
+	margin-top:7vw !important;
+	text-align:center !important;
+}
+
+select {
+  text-align: center;
+  text-align-last: center;
+  /* webkit*/
+}
+
+select option{
+	background-color: #ead57e !important;
+	width:60vw !important;
+}
+
+.input{
+	border-bottom:3px solid #ead57e;
+	width:60vw;
+	margin:auto;
+	margin-top:5vw;
+	text-align:center;
+	font-size:5vw;
+	padding-bottom:0 !important;
+}
+
+.grey{
+	color:#77605c;
+}
+
+ion-icon{
+	font-size:10vw !important;
+	margin-top:-1vw;
+}
+
+.ion-ios-translateicon,
+.ion-md-translateicon{
+  content: url(../assets/imgs/isalin.png);
+  width: 15vw;
+  height: 12vw;
+  font-size:10vw !important;
+  margin-top:0vw !important;
+  padding:0 !important;
+}
+
+.ion-ios-dictionaryicon,
+.ion-md-dictionaryicon{
+  content: url(../assets/imgs/tukuyin.png);
+  width: 20vw;
+  height: 10vw;
+  font-size:10vw !important;
+  margin-top:0vw !important;
+  padding:0 !important;
+}
+
+.ESalinButton{
+	text-align:center;
+	margin-top:6vw;
+	width:35vw;
+	height:10vw;
+}
+
+.toolbar-title.toolbar-title-md, 
+.toolbar-title.toolbar-title-ios, 
+.toolbar-title.toolbar-title-wp { color: map-get($colors, light); }

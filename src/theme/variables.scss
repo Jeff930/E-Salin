@@ -34,8 +34,8 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #ead57e,
+  secondary:  #e2c653,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
@@ -47,7 +47,24 @@ $colors: (
 // iOS only Sass variables can go here
 
 
+$toolbar-ios-title-text-align:center;
+$toolbar-ios-title-font-size: 10vw;
+$toolbar-md-title-font-size : 10vw;
+$toolbar-wp-title-font-size : 10vw;
 
+$tabs-ios-tab-font-size:4vw;
+$tabs-md-tab-font-size:4vw;
+$tabs-wp-tab-font-size:4vw;
+
+$toolbar-ios-height	:8vw;
+$toolbar-md-height	:8vw;
+$toolbar-wp-height	:8vw;
+
+$toolbar-wp-button-font-size:10vw;
+$toolbar-md-button-font-size:10vw;
+$toolbar-ios-button-font-size:10vw;
+
+$text-input-placeholder-color:#77605c;
 
 // App Material Design Variables
 // --------------------------------------------------
