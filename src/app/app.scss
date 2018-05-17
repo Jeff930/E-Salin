@@ -36,6 +36,16 @@ ion-content{
 	font-size:80vw !important;
 }
 
+.translateText{
+	//overflow:hidden;
+	//text-overflow:visible;
+	//height:10vw !important;
+	//text-align:center;
+	margin-left: 4vw;
+		font-size:7vw !important;
+	
+}
+
 .text-input-md {
 text-align: center;
 padding: 0;
@@ -100,12 +110,32 @@ ion-icon{
   padding:0 !important;
 }
 
+.translatebutton{
+	height:15vw !important;
+	margin-top:0.2vw;
+	margin-left:0vw;
+	width:50vw;
+
+}
+
+.dictionarymargin{
+	margin-top:10vw;
+}
+
+
+.dictionarybutton{
+	height:15vw !important;
+	margin-top:-22.5vw;
+	margin-left:50vw;
+	//margin-right:-6vw;
+	width:50vw;
+}
+
 .ion-ios-dictionaryicon,
 .ion-md-dictionaryicon{
   content: url(../assets/imgs/tukuyin.png);
   width: 20vw;
   height: 10vw;
-  font-size:10vw !important;
   margin-top:0vw !important;
   padding:0 !important;
 }
@@ -115,8 +145,13 @@ ion-icon{
 	margin-top:6vw;
 	width:35vw;
 	height:10vw;
+	margin-left:33vw !important;
 }
 
 .toolbar-title.toolbar-title-md, 
 .toolbar-title.toolbar-title-ios, 
 .toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
+
+.hidden{
+	display:none;
+}
