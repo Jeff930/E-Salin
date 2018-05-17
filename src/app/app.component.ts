@@ -4,6 +4,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {Keyboard} from '@ionic-native/keyboard';
 
+
+import { FunctionTabsPage } from '../pages/function-tabs/function-tabs';
+import { HelpTabPage } from '../pages/help-tab/help-tab';
+import { AboutTabPage } from '../pages/about-tab/about-tab';
 import { TranslatePage } from '../pages/translate/translate';
 import { DictionaryPage } from '../pages/dictionary/dictionary';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -26,10 +30,6 @@ export class MyApp {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Diksyunaryo', component: TabsPage },
-      { title: 'Paborito', component: FavoriteTabPage }
-    ];
   }
 
   initializeApp() {
