@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { TagalogFavoritePage } from '../tagalog-favorite/tagalog-favorite';
+import { IlokoFavoritePage } from '../iloko-favorite/iloko-favorite';
+import { KapampanganFavoritePage } from '../kapampangan-favorite/kapampangan-favorite';
+
 /**
  * Generated class for the FavoriteTabPage page.
  *
@@ -15,8 +19,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FavoriteTabPage {
 
+  tab1Root = TagalogFavoritePage;
+  tab2Root = IlokoFavoritePage;
+  tab3Root = KapampanganFavoritePage;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FavoriteTabPage');
