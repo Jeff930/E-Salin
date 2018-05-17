@@ -2,9 +2,43 @@
   <ion-navbar align-title="center" color="secondary" >
     <ion-title class="titleText">E-SALIN</ion-title>
   </ion-navbar>
+  
 </ion-header>
 
-<ion-content padding text-center>
-	<ion-input class="input" placeholder="Magtala ng Salita"></ion-input>
-	 <button ion-button class="ESalinButton" color="secondary">Tukuyin</button>
+<ion-content>
+	<div id="translator">
+    <button ion-button class="translatebutton" color="secondary"> 
+      <ion-icon  name="translateicon" class="translateIcon" icon-left ></ion-icon> 
+    </button>
+
+    <button ion-button class="dictionarybutton" color="primary" (click)="service.showDictionary()"> 
+      <ion-icon  name="dictionaryicon" ></ion-icon>
+    </button>
+
+	<h1 class="center grey">Pumili ng Lenggwahe</h1>
+	<select class="spinner" [(ngModel)]="service.translateLanguage">
+    	<option selected="true">Tagalog</option>
+    	<option>Iloko</option>
+    	<option>Kapampangan</option>
+  </select>
+  <ion-input class="input" [(ngModel)]="service.translateWord" placeholder="Magtala ng Salita"></ion-input>
+  <button ion-button padding text-center class="ESalinButton" color="secondary">Isalin</button>
+</div>
+
+<div class="hidden" id="dictionary">
+    <button ion-button class="translatebutton" color="primary" (click)="service.showTranslator()"> 
+      <ion-icon  name="translateicon" class="translateIcon" icon-left ></ion-icon> 
+    </button>
+
+    <button ion-button class="dictionarybutton" color="secondary"> 
+      <ion-icon  name="dictionaryicon" ></ion-icon>
+    </button>
+
+
+
+	
+	<ion-input text-center class="input" [(ngModel)]="service.dictionaryWord" placeholder="Magtala ng Salita"></ion-input>
+	 <button padding text-center ion-button class="ESalinButton" color="secondary">Tukuyin</button>
+	</div>
 </ion-content>
+
