@@ -3,13 +3,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TranslatePage } from '../pages/translate/translate';
-import { DictionaryPage } from '../pages/dictionary/dictionary';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FavoriteTabPage } from '../pages/favorite-tab/favorite-tab';
-import { TagalogFavoritePage } from '../pages/tagalog-favorite/tagalog-favorite';
-import { IlokoFavoritePage } from '../pages/iloko-favorite/iloko-favorite';
-import { KapampanganFavoritePage } from '../pages/kapampangan-favorite/kapampangan-favorite';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +22,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Diksyunaryo', component: TabsPage },
-      { title: 'Paborito', component: FavoriteTabPage },
+      { title: 'Paborito', component: FavoriteTabPage},
     ];
   }
 
