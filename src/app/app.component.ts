@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {Keyboard} from '@ionic-native/keyboard';
 
 import { TranslatePage } from '../pages/translate/translate';
 import { DictionaryPage } from '../pages/dictionary/dictionary';
@@ -22,13 +21,13 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,public keyboard: Keyboard) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Diksyunaryo', component: TabsPage },
-      { title: 'Paborito', component: FavoriteTabPage }
+      { title: 'Paborito', component: FavoriteTabPage },
     ];
   }
 
@@ -36,7 +35,6 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.keyboard.disableScroll(true);
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

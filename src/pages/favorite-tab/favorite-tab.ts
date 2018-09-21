@@ -1,25 +1,19 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the FavoriteTabPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { TagalogFavoritePage } from '../tagalog-favorite/tagalog-favorite';
+import { IlokoFavoritePage } from '../iloko-favorite/iloko-favorite';
+import { KapampanganFavoritePage } from '../kapampangan-favorite/kapampangan-favorite';
 
-@IonicPage()
 @Component({
-  selector: 'page-favorite-tab',
-  templateUrl: 'favorite-tab.html',
+  templateUrl: 'tabs.html'
 })
-export class FavoriteTabPage {
+export class TabsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  tab1Root = TagalogFavoritePage;
+  tab2Root = IlokoFavoritePage;
+  tab3Root = KapampanganFavoritePage;
+
+  constructor() {
+
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FavoriteTabPage');
-  }
-
 }
