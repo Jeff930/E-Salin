@@ -5,7 +5,7 @@ import { IlokoFavoritePage } from '../iloko-favorite/iloko-favorite';
 import { KapampanganFavoritePage } from '../kapampangan-favorite/kapampangan-favorite';
 
 @Component({
-  templateUrl: 'favorite-tabs.html'
+  templateUrl: 'favorite-tab.html'
 })
 export class FavoriteTabPage {
 
