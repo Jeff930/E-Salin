@@ -10,6 +10,8 @@ import { FavoriteTabPage } from '../pages/favorite-tab/favorite-tab';
 import { TagalogFavoritePage } from '../pages/tagalog-favorite/tagalog-favorite';
 import { IlokoFavoritePage } from '../pages/iloko-favorite/iloko-favorite';
 import { KapampanganFavoritePage } from '../pages/kapampangan-favorite/kapampangan-favorite';
+import {HelpTabPage} from '../pages/help-tab/help-tab'
+import {AboutTabPage} from '../pages/about-tab/about-tab'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     IlokoFavoritePage,
     TagalogFavoritePage,
     KapampanganFavoritePage,
+    HelpTabPage,
+    AboutTabPage,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     IlokoFavoritePage,
     TagalogFavoritePage,
     KapampanganFavoritePage,
+    HelpTabPage,
+    AboutTabPage,
   ],
   providers: [
     StatusBar,

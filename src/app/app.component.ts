@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { FavoriteTabPage } from '../pages/favorite-tab/favorite-tab';
+import {HelpTabPage} from '../pages/help-tab/help-tab'
+import {AboutTabPage} from '../pages/about-tab/about-tab'
 
 @Component({
   templateUrl: 'app.html'
@@ -23,6 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Diksyunaryo', component: TabsPage },
       { title: 'Paborito', component: FavoriteTabPage},
+      { title: 'Gabay sa Paggamit', component: HelpTabPage},
+      { title: 'Patungkol sa app', component: AboutTabPage},
     ];
   }
 
