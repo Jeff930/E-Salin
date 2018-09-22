@@ -23,9 +23,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Diksyunaryo', component: TabsPage },
-      { title: 'Paborito', component: FavoriteTabPage},
-      { title: 'Gabay sa Paggamit', component: HelpTabPage},
+      { title: 'Tagasalin at Talahulugan', component: TabsPage },
+      { title: 'Mga Paboritong Salita', component: FavoriteTabPage},
+      { title: 'Paggabay sa Paggamit', component: HelpTabPage},
       { title: 'Patungkol sa app', component: AboutTabPage},
     ];
   }

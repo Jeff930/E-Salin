@@ -120,4 +120,8 @@ ion-icon{
 
 .toolbar-title.toolbar-title-md, 
 .toolbar-title.toolbar-title-ios, 
-.toolbar-title.toolbar-title-wp { color: map-get($colors, light); }
+.toolbar-title.toolbar-title-wp { 
+	color: map-get($colors, light);
+	background-color: map-get($colors, secondary);
+	border-color: map-get($colors, secondary);
+}
