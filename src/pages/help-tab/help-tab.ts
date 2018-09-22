@@ -1,25 +1,17 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the HelpPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Help1Page } from '../help1/help1';
+import { Help2Page } from '../help2/help2';
 
-@IonicPage()
 @Component({
-  selector: 'page-helptab',
-  templateUrl: 'helptab.html',
+  templateUrl: 'help-tab.html'
 })
 export class HelpTabPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  tab1Root = Help1Page;
+  tab2Root = Help2Page;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HelpPage');
-  }
+  constructor() {
 
+  }
 }
