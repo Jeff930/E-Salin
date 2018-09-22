@@ -12,6 +12,11 @@ import { IlokoFavoritePage } from '../pages/iloko-favorite/iloko-favorite';
 import { KapampanganFavoritePage } from '../pages/kapampangan-favorite/kapampangan-favorite';
 import {HelpTabPage} from '../pages/help-tab/help-tab'
 import {AboutTabPage} from '../pages/about-tab/about-tab'
+import {About1Page} from '../pages/about1/about1'
+import {About2Page} from '../pages/about2/about2'
+import {Help1Page} from '../pages/help1/help1'
+import {Help2Page} from '../pages/help2/help2'
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,6 +34,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     KapampanganFavoritePage,
     HelpTabPage,
     AboutTabPage,
+    About1Page,
+    About2Page,
+    Help1Page,
+    Help2Page,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +55,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     KapampanganFavoritePage,
     HelpTabPage,
     AboutTabPage,
+    About1Page,
+    About2Page,
+    Help1Page,
+    Help2Page,
   ],
   providers: [
     StatusBar,
