@@ -5,9 +5,9 @@ import { IlokoFavoritePage } from '../iloko-favorite/iloko-favorite';
 import { KapampanganFavoritePage } from '../kapampangan-favorite/kapampangan-favorite';
 
 @Component({
-  templateUrl: 'tabs.html'
+  templateUrl: 'favorite-tab.html'
 })
-export class TabsPage {
+export class FavoriteTabPage {
 
   tab1Root = TagalogFavoritePage;
   tab2Root = IlokoFavoritePage;

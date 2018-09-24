@@ -2,14 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
-import { TranslatePage } from '../pages/translate/translate';
-import { DictionaryPage } from '../pages/dictionary/dictionary';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FavoriteTabPage } from '../pages/favorite-tab/favorite-tab';
-import { TagalogFavoritePage } from '../pages/tagalog-favorite/tagalog-favorite';
-import { IlokoFavoritePage } from '../pages/iloko-favorite/iloko-favorite';
-import { KapampanganFavoritePage } from '../pages/kapampangan-favorite/kapampangan-favorite';
+import {HelpTabPage} from '../pages/help-tab/help-tab'
+import {AboutTabPage} from '../pages/about-tab/about-tab'
 
 @Component({
   templateUrl: 'app.html'
@@ -21,13 +19,15 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private screenOrientation: ScreenOrientation) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Diksyunaryo', component: TabsPage },
-      { title: 'Paborito', component: FavoriteTabPage },
+      { title: 'Tagasalin at Talahulugan', component: TabsPage },
+      { title: 'Mga Paboritong Salita', component: FavoriteTabPage},
+      { title: 'Paggabay sa Paggamit', component: HelpTabPage},
+      { title: 'Patungkol sa app', component: AboutTabPage},
     ];
   }
 
@@ -35,6 +35,7 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
