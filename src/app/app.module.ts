@@ -21,6 +21,8 @@ import {Help2Page} from '../pages/help2/help2'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { SQLite } from '@ionic-native/sqlite';
+
 
 
 @NgModule({
@@ -65,6 +67,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
     StatusBar,
     SplashScreen,
     ScreenOrientation,
+    SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
