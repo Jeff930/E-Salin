@@ -40,7 +40,8 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-plugin-screen-orientation": {}
+      "cordova-plugin-screen-orientation": {},
+      "cordova-sqlite-storage": {}
     }
   }
 }
