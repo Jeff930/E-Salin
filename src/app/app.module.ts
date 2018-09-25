@@ -23,7 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseHandlerProvider } from '../providers/database-handler/database-handler';
-
+import { SQLitePorter } from '@ionic-native/sqlite-porter';
 
 
 @NgModule({
@@ -70,7 +70,8 @@ import { DatabaseHandlerProvider } from '../providers/database-handler/database-
     ScreenOrientation,
     SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DatabaseHandlerProvider
+    DatabaseHandlerProvider,
+    SQLitePorter,
   ]
 })
 export class AppModule {}
