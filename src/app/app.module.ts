@@ -22,6 +22,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { SQLite } from '@ionic-native/sqlite';
+import { DatabaseHandlerProvider } from '../providers/database-handler/database-handler';
 
 
 
@@ -68,7 +69,8 @@ import { SQLite } from '@ionic-native/sqlite';
     SplashScreen,
     ScreenOrientation,
     SQLite,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatabaseHandlerProvider
   ]
 })
 export class AppModule {}
