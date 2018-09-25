@@ -34,3 +34,11 @@ resources/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+
+src/assets/database/Dictionary_db\.db
+
+config\.xml
+
+package-lock\.json
+
+package\.json
