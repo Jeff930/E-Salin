@@ -4,6 +4,7 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { SQLitePorter } from '@ionic-native/sqlite-porter';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { Storage } from '@ionic/storage';
+import 'rxjs/add/operator/toPromise';
 /*
   Generated class for the DatabaseHandlerProvider provider.
 
@@ -38,14 +39,15 @@ export class DatabaseHandlerProvider {
   }
  
   fillDatabase() {
-    this.http.get('assets/database/DictionaryDB.sql').toPromise().then((sql:any) => {
+    this.http.get('assets/database/DictionaryDB.sql')
+    .subscribe((sql:any) => {
         this.sqlitePorter.importSqlToDb(this.database, sql)
           .then(data => {
             this.databaseReady.next(true);
             this.storage.set('database_filled', true);
           })
-          .catch(e => console.error(e));
-      });
+          .catch(e => console.log("this"));
+      },error=>console.log("this"))
   }
 
 }
