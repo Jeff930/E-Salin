@@ -16,13 +16,15 @@ export class DatabaseHandlerProvider {
   database: SQLiteObject;
   private databaseReady: BehaviorSubject<boolean>;
  
-  constructor(public sqlitePorter: SQLitePorter, private storage: Storage, private sqlite: SQLite, private platform: Platform, private http: HttpClient) {
-    this.databaseReady = new BehaviorSubject(false);
-    this.platform.ready().then(() => {
-      this.sqlite.create({
-        name: 'DictionaryDB.db',
-        location: 'default'
-      })
+  constructor(public sqlitePorter: SQLitePorter, private storage: Storage, private sqlite: SQLite, private http: HttpClient) {
+    this.openDB();
+  }
+
+  openDB(){
+    this.sqlite.create({
+      name: 'DictionaryDB.db',
+      location: 'default'
+    })
         .then((db: SQLiteObject) => {
           this.database = db;
           this.storage.get('database_filled').then(val => {
@@ -33,7 +35,6 @@ export class DatabaseHandlerProvider {
             }
           });
         });
-    });
   }
  
   fillDatabase() {
