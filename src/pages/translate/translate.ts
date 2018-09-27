@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DatabaseHandlerProvider} from '../../providers/database-handler/database-handler';
+
 /**
  * Generated class for the TranslatePage page.
  *
@@ -14,11 +16,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TranslatePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public databaseHandlerProvider : DatabaseHandlerProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TranslatePage');
+  }
+
+  openDB(){
+    this.databaseHandlerProvider.openDB();
   }
 
 }
