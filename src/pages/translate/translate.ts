@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 /**
  * Generated class for the TranslatePage page.
  *
@@ -15,26 +14,11 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 })
 export class TranslatePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private sqlite: SQLite) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TranslatePage');
-  }
-
-  openDB(){
-    this.sqlite.create({
-      name: 'data.db',
-      location: 'default'
-    })
-      .then((db: SQLiteObject) => {
-    
-    
-        console.log("successful");
-    
-    
-      })
-      .catch(e => console.log(e));
   }
 
 }
