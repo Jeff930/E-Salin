@@ -24,6 +24,7 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseHandlerProvider } from '../providers/database-handler/database-handler';
 import { SQLitePorter } from '@ionic-native/sqlite-porter';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { SQLitePorter } from '@ionic-native/sqlite-porter';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, { scrollAssist: false, autoFocusAssist: false } ),
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -72,6 +74,7 @@ import { SQLitePorter } from '@ionic-native/sqlite-porter';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatabaseHandlerProvider,
     SQLitePorter,
+    Storage,
   ]
 })
 export class AppModule {}
