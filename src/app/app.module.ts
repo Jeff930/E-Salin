@@ -25,6 +25,8 @@ import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseHandlerProvider } from '../providers/database-handler/database-handler';
 import { SQLitePorter } from '@ionic-native/sqlite-porter';
 import { IonicStorageModule } from '@ionic/storage';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -48,6 +50,7 @@ import { IonicStorageModule } from '@ionic/storage';
     BrowserModule,
     IonicModule.forRoot(MyApp, { scrollAssist: false, autoFocusAssist: false } ),
     IonicStorageModule.forRoot(),
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -74,7 +77,7 @@ import { IonicStorageModule } from '@ionic/storage';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatabaseHandlerProvider,
     SQLitePorter,
-    Storage,
+    HttpClient,
   ]
 })
 export class AppModule {}
