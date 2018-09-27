@@ -42,3 +42,9 @@ config\.xml
 package-lock\.json
 
 package\.json
+
+src/assets/database/dict\.db
+
+src/assets/database/Dictionary_db\.sql
+
+src/assets/database/DictionaryDB\.sql

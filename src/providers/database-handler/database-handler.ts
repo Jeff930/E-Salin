@@ -2,8 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { SQLitePorter } from '@ionic-native/sqlite-porter';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { Storage } from '@ionic/storage';
 /*
@@ -22,7 +20,7 @@ export class DatabaseHandlerProvider {
     this.databaseReady = new BehaviorSubject(false);
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'developers.db',
+        name: 'DictionaryDB.db',
         location: 'default'
       })
         .then((db: SQLiteObject) => {
@@ -39,9 +37,7 @@ export class DatabaseHandlerProvider {
   }
  
   fillDatabase() {
-    this.http.get('assets/dummyDump.sql')
-      .map(res => res.text())
-      .subscribe(sql => {
+    this.http.get('assets/database/DictionaryDB.sql').toPromise().then((sql:any) => {
         this.sqlitePorter.importSqlToDb(this.database, sql)
           .then(data => {
             this.databaseReady.next(true);
