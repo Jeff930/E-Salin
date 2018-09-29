@@ -12,11 +12,8 @@ import { Component } from '@angular/core';
 })
 export class TranslateModalComponent {
 
-  text: string;
-
   constructor() {
     console.log('Hello TranslateModalComponent Component');
-    this.text = 'Hello World';
   }
 
 }

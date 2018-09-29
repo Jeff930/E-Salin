@@ -12,11 +12,9 @@ import { Component } from '@angular/core';
 })
 export class DictionaryModalComponent {
 
-  text: string;
 
   constructor() {
     console.log('Hello DictionaryModalComponent Component');
-    this.text = 'Hello World';
   }
 
 }
