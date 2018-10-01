@@ -16,6 +16,7 @@ export class DatabaseHandlerProvider {
 
   database: SQLiteObject;
   private databaseReady: BehaviorSubject<boolean>;
+  userInput="";
  
   constructor(public sqlitePorter: SQLitePorter, private storage: Storage, private sqlite: SQLite, private http: HttpClient) {
     this.openDB();
@@ -48,6 +49,9 @@ export class DatabaseHandlerProvider {
           })
           .catch(e => console.log("this"));
       },error=>console.log("this"))
+  }
+
+  getInput(){
   }
 
 }

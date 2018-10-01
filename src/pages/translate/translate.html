@@ -15,5 +15,6 @@
     	<option>Kapampangan</option>
   </select>
   <ion-input class="input" placeholder="Magtala ng Salita"></ion-input>
-  <button ion-button class="ESalinButton" color="secondary" (click)="openDB()">Isalin</button>
+  <button ion-button class="ESalinButton" [(ngModel)]="databaseHandlerProvider.userInput" color="secondary" (click)="databaseHandlerProvider.getInput()">Isalin</button>
+  <p>{{databaseHandlerProvider.userInput}}</p>
 </ion-content>
