@@ -17,6 +17,7 @@ export class DatabaseHandlerProvider {
   database: SQLiteObject;
   private databaseReady: BehaviorSubject<boolean>;
   userInput="";
+  translateTo="Tagalog";
  
   constructor(public sqlitePorter: SQLitePorter, private storage: Storage, private sqlite: SQLite, private http: HttpClient) {
     this.openDB();
@@ -51,7 +52,8 @@ export class DatabaseHandlerProvider {
       },error=>console.log("this"))
   }
 
-  getInput(){
+  getTranslate(){
+
   }
 
 }

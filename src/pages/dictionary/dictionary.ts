@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DatabaseHandlerProvider} from '../../providers/database-handler/database-handler';
 
 /**
  * Generated class for the DictionaryPage page.
@@ -15,7 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DictionaryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  public databaseHandlerProvider : DatabaseHandlerProvider) {
   }
 
   ionViewDidLoad() {
