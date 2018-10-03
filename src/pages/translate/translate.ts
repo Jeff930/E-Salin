@@ -20,10 +20,6 @@ export class TranslatePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TranslatePage');
-  }
-
-  openDB(){
     this.databaseHandlerProvider.openDB();
   }
 

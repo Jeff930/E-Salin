@@ -16,5 +16,6 @@
   </select>
   <ion-input class="input" placeholder="Magtala ng Salita" [(ngModel)]="databaseHandlerProvider.userInput"></ion-input>
   <button ion-button class="ESalinButton" color="secondary" (click)="databaseHandlerProvider.getTranslate()">Isalin</button>
-  <h5>{{databaseHandlerProvider.translateTo}}</h5>
+  <h5>{{databaseHandlerProvider.userInput}}</h5>
+  <h5>{{databaseHandlerProvider.Results}}</h5>
 </ion-content>

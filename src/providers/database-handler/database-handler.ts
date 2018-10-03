@@ -18,6 +18,7 @@ export class DatabaseHandlerProvider {
   private databaseReady: BehaviorSubject<boolean>;
   userInput="";
   translateTo="Tagalog";
+  Results;
  
   constructor(public sqlitePorter: SQLitePorter, private storage: Storage, private sqlite: SQLite, private http: HttpClient) {
     this.openDB();
@@ -53,7 +54,11 @@ export class DatabaseHandlerProvider {
   }
 
   getTranslate(){
-
+    this.database.open();
+    this.database.executeSql("SELECT EntryNo from Dictionary_Entry WHERE EntryNo=1")
+    .then((result) => {
+       this.Results = JSON.stringify(result);
+    })
   }
 
 }
