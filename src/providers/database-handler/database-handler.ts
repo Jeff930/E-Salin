@@ -18,7 +18,7 @@ export class DatabaseHandlerProvider {
   private databaseReady: BehaviorSubject<boolean>;
   userInput="";
   translateTo="Tagalog";
-  Results;
+  Results="Pangalawa";
  
   constructor(public sqlitePorter: SQLitePorter, private storage: Storage, private sqlite: SQLite, private http: HttpClient) {
     this.openDB();
@@ -26,7 +26,7 @@ export class DatabaseHandlerProvider {
 
   openDB(){
     this.sqlite.create({
-      name: 'DictionaryDB.db',
+      name: 'Dictdb.db',
       location: 'default'
     })
         .then((db: SQLiteObject) => {
@@ -42,23 +42,27 @@ export class DatabaseHandlerProvider {
   }
  
   fillDatabase() {
-    this.http.get('assets/database/DictionaryDB.sql')
-    .subscribe((sql:any) => {
+    console.log("fill called");
+    this.http.get('assets/database/Dictdb.sql',{responseType:'text'})
+   .subscribe((sql:any) => {
+        console.log("subscribed");
         this.sqlitePorter.importSqlToDb(this.database, sql)
           .then(data => {
             this.databaseReady.next(true);
             this.storage.set('database_filled', true);
+            console.log("dbready")
           })
-          .catch(e => console.log("this"));
-      },error=>console.log("this"))
+          .catch(e => console.log("eto  " + JSON.stringify(e),Object.getOwnPropertyNames(e)));
+      },error=>console.log(JSON.stringify(error)))
   }
 
   getTranslate(){
-    this.database.open();
-    this.database.executeSql("SELECT EntryNo from Dictionary_Entry WHERE EntryNo=1")
+    this.openDB();
+    this.database.executeSql('SELECT EntryNo from DictionaryEntry WHERE EntryNo=1',[])
     .then((result) => {
+      console.log("hayy" + result);
        this.Results = JSON.stringify(result);
-    })
+    },error=>{console.log(JSON.stringify("mamaya"))})
   }
 
 }
