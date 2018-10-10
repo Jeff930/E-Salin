@@ -48,6 +48,7 @@ export class DatabaseHandlerProvider {
         console.log("subscribed");
         this.sqlitePorter.importSqlToDb(this.database, sql)
           .then(data => {
+            console.log("dbready")
             this.databaseReady.next(true);
             this.storage.set('database_filled', true);
             console.log("dbready")
